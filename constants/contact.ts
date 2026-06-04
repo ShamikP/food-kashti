@@ -1,9 +1,8 @@
-export const contactInfo = {
-    phone: "+91XXXXXXXXXX",
-  
-    whatsapp: "+91XXXXXXXXXX",
-  
-    email: "info@foodkashti.com",
-  
-    city: "Vadodara",
-  };
+export const CONTACT = {
+  phone: "+919799100651",
+  whatsapp: "919799100651",
+  email: "foodkashti@gmail.com",
+  city: "Vadodara, Gujarat",
+  address:
+    "Sanmati Park, Vemali, Sama-Savli Rd, New Sama, Vadodara, Gujarat 390024",
+};

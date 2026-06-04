@@ -27,11 +27,11 @@ const buttonVariants = cva(
         link:
           "text-primary underline-offset-4 hover:underline",
 
-        brand:
-        "bg-primary-brand text-white hover:bg-primary-brand/90",
+          brand:
+  "bg-[#F57C00] text-white hover:bg-[#E56F00] shadow-md",
 
-        brandOutline:
-          "border border-primary-brand text-primary-brand bg-transparent hover:bg-primary-brand hover:text-white",
+  brandOutline:
+  "border border-[#F57C00] text-[#F57C00] bg-transparent hover:bg-[#F57C00] hover:text-white",
 
         whatsapp:
           "bg-green-600 text-white hover:bg-green-700",

@@ -1,6 +1,9 @@
+import LocalBusinessSchema from "@/components/seo/local-business-schema";
 import type { Metadata } from "next";
 import { Bree_Serif, Poppins } from "next/font/google";
 import "./globals.css";
+
+import SiteLayout from "@/components/layout/site-layout";
 
 const breeSerif = Bree_Serif({
   subsets: ["latin"],
@@ -15,7 +18,7 @@ const poppins = Poppins({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://foodkashti.com"),
+  metadataBase: new URL("https://foodkashti.in"),
 
   title: {
     default: "Food Kashti | Homemade Food & Catering in Vadodara",
@@ -23,32 +26,70 @@ export const metadata: Metadata = {
   },
 
   description:
-    "Food Kashti offers homemade food, catering services, tiffin services, train food delivery, healthy snacks, ready-to-cook products, and customized meal solutions in Vadodara.",
+    "Food Kashti offers homemade food, catering services, tiffin services, train food delivery, healthy snacks and Jain food solutions across Vadodara.",
 
   keywords: [
     "Food Kashti",
     "Homemade Food Vadodara",
-    "Catering Services Vadodara",
     "Tiffin Service Vadodara",
+    "Catering Services Vadodara",
+    "Jain Food Vadodara",
+    "Breakfast Delivery Vadodara",
     "Train Food Delivery Vadodara",
-    "Healthy Snacks Vadodara",
-    "Homemade Snacks",
-    "Ready to Cook Products",
+    "Homemade Snacks Vadodara",
     "Event Catering Vadodara",
+    "Food Catering Vadodara",
   ],
 
+  authors: [
+    {
+      name: "Food Kashti",
+    },
+  ],
+
+  creator: "Food Kashti",
+
+  publisher: "Food Kashti",
+
+  alternates: {
+    canonical: "/",
+  },
+
   openGraph: {
-    title: "Food Kashti",
+    title: "Food Kashti | Homemade Food & Catering in Vadodara",
+
     description:
-      "Homemade food and catering services in Vadodara. Simple, authentic and affordable.",
-    type: "website",
-    locale: "en_IN",
+      "Fresh homemade food, tiffin services, catering, Jain food and train food delivery across Vadodara.",
+
+    url: "https://foodkashti.in",
+
     siteName: "Food Kashti",
+
+    locale: "en_IN",
+
+    type: "website",
+  },
+
+  twitter: {
+    card: "summary_large_image",
+
+    title: "Food Kashti",
+
+    description:
+      "Homemade food, catering services and tiffin solutions in Vadodara.",
   },
 
   robots: {
     index: true,
     follow: true,
+
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
   },
 };
 
@@ -63,8 +104,12 @@ export default function RootLayout({
       className={`${breeSerif.variable} ${poppins.variable}`}
     >
       <body className="bg-background text-foreground antialiased min-h-screen">
-        {children}
-      </body>
+  <LocalBusinessSchema />
+
+  <SiteLayout>
+    {children}
+  </SiteLayout>
+</body>
     </html>
   );
 }
