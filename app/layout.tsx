@@ -25,6 +25,14 @@ export const metadata: Metadata = {
     template: "%s | Food Kashti",
   },
 
+  icons: {
+    icon: [
+      { url: "/favicon.ico" },
+      { url: "/favicon-96x96.png", sizes: "96x96", type: "image/png" },
+    ],
+    apple: "/apple-touch-icon.png",
+  },
+
   description:
     "Food Kashti offers homemade food, catering services, tiffin services, train food delivery, healthy snacks and Jain food solutions across Vadodara.",
 
